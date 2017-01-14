@@ -1,7 +1,8 @@
 const express = require('express')
-const http = require('http')
 const app = express()
 const librarySearch = require('library-search')
+
+app.set('port', process.env.PORT || 5000)
 
 app.route('/available-books')
   .get(function(req, res, next) {
@@ -16,9 +17,7 @@ app.route('/available-books')
         res.status(500).json({ error })
       })
   })
-    
-const port = 8080
 
-console.log(`Listening on port ${port}...`)
-
-http.createServer(app).listen(port)
+app.listen(app.get('port'), () => {
+  console.log('Library search API is running on port', app.get('port'));
+})
