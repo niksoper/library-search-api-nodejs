@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const librarySearch = require('library-search')
+const librarySearch = require('./stub-search')
 
 app.set('port', process.env.PORT || 5000)
 
