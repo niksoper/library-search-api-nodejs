@@ -20,6 +20,6 @@
   "dependencies": {
     "apicache": "^0.8.3",
     "express": "^4.14.0",
-    "library-search": "0.0.x"
+    "library-search": "0.0.6"
   }
 }
